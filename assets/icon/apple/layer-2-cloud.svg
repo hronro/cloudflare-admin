@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Layer 2: Cloud shape (main element) -->
+  <defs>
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main cloud shape -->
+  <path d="M760 580
+           C760 520 720 470 660 460
+           C660 380 590 320 510 320
+           C450 320 400 360 380 410
+           C370 408 360 406 350 406
+           C290 406 240 456 240 516
+           C240 520 240 524 241 528
+           C200 545 172 586 172 634
+           C172 698 224 750 288 750
+           L720 750
+           C776 750 822 704 822 648
+           C822 605 796 568 760 580Z" 
+        fill="url(#cloudGradient)"
+        filter="drop-shadow(0 8 16 rgba(0,0,0,0.15))"/>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Layer 3: DNS network nodes and connections -->
+  <defs>
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F6821F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E05F00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Connection lines -->
+  <g stroke="#E05F00" stroke-width="8" stroke-linecap="round" opacity="0.8">
+    <!-- Center to top -->
+    <line x1="512" y1="540" x2="512" y2="420"/>
+    <!-- Center to bottom-left -->
+    <line x1="512" y1="540" x2="380" y2="640"/>
+    <!-- Center to bottom-right -->
+    <line x1="512" y1="540" x2="644" y2="640"/>
+  </g>
+  
+  <!-- Central node (larger) -->
+  <circle cx="512" cy="540" r="48" fill="url(#nodeGradient)" stroke="#FFFFFF" stroke-width="6"/>
+  
+  <!-- Top node -->
+  <circle cx="512" cy="400" r="36" fill="url(#nodeGradient)" stroke="#FFFFFF" stroke-width="5"/>
+  
+  <!-- Bottom-left node -->
+  <circle cx="365" cy="655" r="36" fill="url(#nodeGradient)" stroke="#FFFFFF" stroke-width="5"/>
+  
+  <!-- Bottom-right node -->
+  <circle cx="659" cy="655" r="36" fill="url(#nodeGradient)" stroke="#FFFFFF" stroke-width="5"/>
+</svg>
