@@ -1,0 +1,37 @@
+name: Build App On Push
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  CARGO_TERM_COLOR: always
+  MACOSX_DEPLOYMENT_TARGET: "10.12"
+
+jobs:
+  build-macos:
+    runs-on: macos-15
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - x86_64-apple-darwin
+          - aarch64-apple-darwin
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@1.93
+        with:
+          targets: ${{ matrix.target }}
+
+      - name: Build ${{ matrix.target }}
+        timeout-minutes: 60
+        run: bash build-macos-app.sh
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: ${{ matrix.target }}
+          path: target/release/macos/cloudflare-admin.dmg
